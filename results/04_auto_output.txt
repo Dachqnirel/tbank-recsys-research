@@ -1,0 +1,30 @@
+1. Сетка: 90 признаков за 1.55 с
+2. auto_all (вся сетка):
+   ...обучаю: 101 признаков, seed=0
+   auto_all         seed=0 | признаков 101 | обучение   58.6 с | деревьев 272 | VAL AUC 0.7330 LogLoss 0.5784 NDCG@10 0.8002
+   ...обучаю: 101 признаков, seed=1
+   auto_all         seed=1 | признаков 101 | обучение   54.1 с | деревьев 302 | VAL AUC 0.7339 LogLoss 0.5774 NDCG@10 0.7994
+   ...обучаю: 101 признаков, seed=2
+   auto_all         seed=2 | признаков 101 | обучение   49.9 с | деревьев 284 | VAL AUC 0.7329 LogLoss 0.5788 NDCG@10 0.7989
+3. Перестановочная важность на val (90 признаков x 2 повтора)...
+   готово за 18.9 с; признаков с положительным вкладом: 75 из 90
+   Топ-15:
+user_watched_pct_mean_60d          0.02160
+user_ctype_watched_pct_mean_60d    0.01177
+item_watched_pct_mean_60d          0.00696
+user_watched_pct_mean_30d          0.00452
+item_target_mean_60d               0.00311
+user_target_mean_60d               0.00229
+item_cnt_30d                       0.00182
+item_watched_pct_mean_30d          0.00155
+user_cnt_60d                       0.00148
+user_ctype_target_mean_60d         0.00136
+item_target_mean_30d               0.00132
+item_cnt_3d                        0.00129
+item_cnt_60d                       0.00121
+genre_cnt_60d                      0.00113
+user_ctype_watched_pct_mean_30d    0.00104
+4. Выбор числа признаков K по val AUC (seed 0):
+   ...обучаю: 21 признаков, seed=0
+   K= 10: val AUC 0.7288 (обучение 37.2 с)
+   ...обучаю: 31 признаков, seed=0

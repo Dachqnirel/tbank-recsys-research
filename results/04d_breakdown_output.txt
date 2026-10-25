@@ -1,0 +1,14 @@
+Отобранные признаки по сущностям и окнам:
+window      1d  3d  7d  14d  30d  60d
+entity                               
+genre        1   0   1    0    1    2
+item         2   2   2    2    3    3
+user         1   0   1    1    2    3
+user_ctype   1   1   2    2    2    3
+user_genre   0   0   0    0    1    1
+
+По агрегатам:
+agg
+watched_pct_mean    16
+target_mean         12
+cnt                 12

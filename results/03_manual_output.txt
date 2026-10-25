@@ -1,0 +1,31 @@
+Строк: train 201,721, val 38,886, test 42,513
+1. Опорные точки (без модели):
+   ref_random       | VAL AUC 0.4993 LogLoss 1.0020 NDCG@10 0.7411
+   ref_constant     | VAL AUC 0.5000 LogLoss 0.6800 NDCG@10 0.7484
+   ref_item_pop30d  | VAL AUC 0.6572 LogLoss 0.8383 NDCG@10 0.8141
+   ref_user_hist30d | VAL AUC 0.6071 LogLoss 1.6801 NDCG@10 0.6532
+2. CatBoost без исторических признаков (анкета + метаданные объекта):
+   ...обучаю: 11 признаков, seed=0
+   static           seed=0 | признаков  11 | обучение   83.5 с | деревьев 741 | VAL AUC 0.6579 LogLoss 0.6371 NDCG@10 0.8116
+   ...обучаю: 11 признаков, seed=1
+   static           seed=1 | признаков  11 | обучение   46.6 с | деревьев 401 | VAL AUC 0.6559 LogLoss 0.6381 NDCG@10 0.8102
+   ...обучаю: 11 признаков, seed=2
+   static           seed=2 | признаков  11 | обучение   95.3 с | деревьев 856 | VAL AUC 0.6573 LogLoss 0.6380 NDCG@10 0.8135
+3. Ручной набор: 20 исторических признаков за 0.90 с
+   ...обучаю: 31 признаков, seed=0
+   manual           seed=0 | признаков  31 | обучение   62.5 с | деревьев 481 | VAL AUC 0.7333 LogLoss 0.5836 NDCG@10 0.7974
+   Топ-10 по встроенной важности CatBoost (seed 0):
+      item_watched_pct_mean_30d         11.88
+      item_target_mean_30d               9.27
+      item_cnt_7d                        8.62
+      item_cnt_30d                       8.25
+      content_type                       7.15
+      user_ctype_watched_pct_mean_60d    6.16
+      main_genre                         5.52
+      user_watched_pct_mean_30d          5.03
+      item_watched_pct_mean_7d           4.14
+      item_target_mean_7d                3.89
+   ...обучаю: 31 признаков, seed=1
+   manual           seed=1 | признаков  31 | обучение   57.8 с | деревьев 442 | VAL AUC 0.7325 LogLoss 0.5839 NDCG@10 0.7951
+   ...обучаю: 31 признаков, seed=2
+   manual           seed=2 | признаков  31 | обучение   51.8 с | деревьев 390 | VAL AUC 0.7327 LogLoss 0.5841 NDCG@10 0.7972
