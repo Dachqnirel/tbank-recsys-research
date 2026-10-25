@@ -30,7 +30,7 @@ STATIC_NUM_COLS = ["kids_flg", "release_year", "for_kids", "age_rating"]
 WINDOWS = [1, 3, 7, 14, 30, 60]
 
 # Обучение: одинаковые параметры для всех подходов, подбирается только число деревьев
-# (early stopping по val). Все параметры уже работали на твоём компьютере в черновике.
+# (early stopping по val). Гиперпараметры не настраивались.
 CATBOOST_PARAMS = dict(
     iterations=1000,
     learning_rate=0.08,
