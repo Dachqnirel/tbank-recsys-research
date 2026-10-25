@@ -199,6 +199,10 @@ bash run_all.sh                                           # шаги 01-05, вы
 | `src/05_report.py` | метрики test, bootstrap, таблица и график |
 | `src/06_scaling.py` | время расчёта признаков от 10 тыс. пользователей до всего dataset (полный замер не выполнен) |
 
+## Как делалась работа
+
+Код и текст отчёта писались с помощью ИИ-ассистента. Постановку задачи, выбор порога и разбиения, запуск всех экспериментов и проверку результатов я делал сам; все числа в отчёте взяты из файлов `results/`, полученных при запуске кода. Внешние источники (репозиторий KION dataset и статья о нём) проверены.
+
 ## Источник данных
 
 Petrov A., Safilo I., Tikhonovich D., Ignatov D. *MTS Kion Implicit Contextualised Sequential Dataset for Movie Recommendation.* ACM RecSys CARS Workshop, 2022. BibTeX — в README репозитория dataset.
